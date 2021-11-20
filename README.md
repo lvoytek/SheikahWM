@@ -23,3 +23,13 @@ sudo apt install libglib2.0-dev libcairo2-dev libpango1.0-dev libxcb-randr0-dev
 ```bash
 cargo build --release
 ```
+
+## Runtime Dependencies
+
+* xcb-randr
+* xmodmap
+
+Ubuntu / Debian
+```bash
+sudo apt install libxcb-randr0-dev x11-xserver-utils
+```
