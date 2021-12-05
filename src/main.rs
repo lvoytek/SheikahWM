@@ -16,9 +16,8 @@ use penrose::{
 use simplelog::{LevelFilter, SimpleLogger};
 
 
-// Replace these with your preferred terminal and program launcher
+// Replace these with your preferred terminal
 const TERMINAL: &str = "xterm";
-const LAUNCHER: &str = "dmenu_run";
 
 
 fn main() -> penrose::Result<()> {
@@ -29,8 +28,6 @@ fn main() -> penrose::Result<()> {
 
     let config = Config::default();
     let key_bindings = gen_keybindings! {
-        // Program launchers
-        "M-s" => run_external!(LAUNCHER);
         "M-Return" => run_external!(TERMINAL);
 
         // Exit Penrose (important to remember this one!)
